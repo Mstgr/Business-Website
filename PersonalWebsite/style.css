@@ -6,3 +6,22 @@
 body{
 	font-family: sans-serif;
 }
+@keyframes fadeIn {
+	from{
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.fade-in-section{
+	opacity: 0;
+	transform: translateY(20px);
+}
+.fade-in-section.animate {
+	opacity: 1; 
+  	transform: translateY(0); 
+  	transition: opacity 1s ease-out, transform 1s ease-out;
+  }
