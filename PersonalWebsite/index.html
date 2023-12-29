@@ -48,6 +48,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#projects">Projects</a>
         </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li> 
       </ul>
     </div>
   </div>
@@ -65,47 +68,63 @@
 
 
 <!-- About Section -->
-<div class="container-fluid p-5 mt-5" id="about">
-  <h2 class="conatiner-sm p-3 text-center">About Me</h2>
+<section id="about">
 
-  <!-- Introduction -->
-  <div class="row align-items-center">
-    <!-- Image Column -->
-    <div class="col-md-6 d-flex justify-content-center" >
-      <div class="fade-in-section" style="max-width: 50%;">
-        <img src="IMG_9435.jpg" class="img-fluid" alt="Profile Picture">
+  <!-- Profile Section -->
+  <div class="container-lg">
+    <h2 class="container-sm p-3 text-center">About Me</h2>
+
+    <!-- Introduction -->
+    <div class="row g-4 justify-content-center align-items-center bg-primary">
+      <!-- Image Column -->
+      <div class="col-md-5 d-flex justify-content-center" >
+        <div class="fade-in-section" style="max-width: 75%;">
+          <img src="IMG_9435.jpg" class="img-fluid" alt="Profile Picture">
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="col-md-5 text-md-start">
+        <div class="fade-in-section">
+          <h3 class="text-center">Junior at Clemson University</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.
+          </p>
+        </div>
       </div>
     </div>
-
-    <div class="col-md-6">
-      <div class="fade-in-section">
-        <h3 class="text-center">Junior at Clemson University</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.
-        </p>
-      </div>
-    </div>
+  </div> 
   
+  <!-- Education Section -->
+  <div class="container-lg mt-5">
+    <div class="row g-4 justify-content-center align-items-center">
+      <!-- Text Column -->
+      <div class="col-md-5 text-md-start">
+        <div class="fade-in-section">
+          <h3 class="text-center">Education and Current Status</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.
+          </p>
+        </div>
+      </div>
 
-    <!-- Education and Current Status -->
-    <div class="col-md-6">
-      <div class="fade-in-section">
-        <h3 class="text-center">Education and Current Status</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ad possimus quos illum dicta illo aperiam rem placeat dolorum qui ratione similique, quod sint eligendi, sed nam, ipsam quidem voluptatibus.</p>
+      <!-- Image Column -->
+      <div class="col-md-5 d-flex justify-content-center" >
+        <div class="fade-in-section" style="max-width: 75%;">
+          <img src="profileTest.png" class="img-fluid" alt="Profile Picture">
+        </div>
       </div>
     </div>
-    <!-- Image Column -->
-    <div class="col-md-6 d-flex justify-content-center">
-      <div class="fade-in-section" style="max-width: 50%;"">
-        <img src="profileTest.png" class="img-fluid" alt="Clemson Picture">
-      </div>
-    </div>
-  
+  </div>
 
-    <!-- Coursework and Technical Skills -->
-    <div class="container mt-1">
-      <h2>Relevant Coursework</h2>            
-      <table class="table table-dark table-bordered table-striped text-bg-color">
+  <!-- Coursework and Technical Skills -->
+  <div class="container-lg mt-5">
+    <div class="text-center fade-in-section">
+      <h2>Relevant Coursework</h2> 
+      <p class="lead text-muted">Relevant Courses that have been completed</p>
+    </div>
+    <div class="col-md p-5 fade-in-section">           
+      <table class="table table-light table-bordered table-striped text-bg-color">
         <!-- Table head -->
         <thead>
           <tr>
@@ -134,42 +153,217 @@
         </tbody>
       </table>
     </div>
+    
+  </div>
 
-    <!-- Language Proficiency -->
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Language Proficiency</h3>
-        <ul>...</ul>
-      </div>
-
-      <!-- University Involvement -->
-      <div class="col-md-6">
-        <h3>University Involvement</h3>
-        <ul>...</ul>
-      </div>
+  <!-- Upcoming Coursework -->
+  <div class="container-lg mt-5">
+    <div class="text-center">
+      <h2>Upcoming Coursework</h2> 
+      <p class="lead text-muted">Upcoming Courses to be completed in the Spring</p>
     </div>
+    <div class="col-md p-5">           
+      <table class="table table-light table-bordered table-striped text-bg-color">
+        <!-- Table head -->
+        <thead>
+          <tr>
+            <th>Coursework</th>
+            <th>Time</th>
+            <th>Technical Skill to be obtained</th>
+          </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+          <tr>
+            <td>Algorithms and Data Structures</td>
+            <td>Spring 2024</td>
+            <td>Fundamental understanding and experience with alrgorithms and data structures</td>
+          </tr>
+          <tr>
+            <td>Computer Organization</td>
+            <td>Spring 2024</td>
+            <td>Fundamental understanding of computer organization</td>
+          </tr>
+          <tr>
+            <td>Software Development Foundations</td>
+            <td>Fall 2024</td>
+            <td>Emphasis on Software development Foundations</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
 
-    <!-- Upcoming Courses -->
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Upcoming Courses</h3>
-        <p>...</p>
+  <!-- University Involvement -->
+  <div class="container-md">
+    <div class="text-center">
+      <h2>University Involvement</h2>
+      <p class="lead text-muted">My involvement in extracuriculars at Clemson</p>
+    </div>
+    <div class="row my-5 g-5 justify-content-around align-items-center">
+      <div class="col-6 col-lg-4">
+        <img src="..." class="img-fluid" alt="Involvement logo">
+      </div>
+      <div class="col-lg-6">
+        
+        <!-- accordion -->
+        <div class="accordion" id="involvements">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-1" aria-expanded="true" aria-controls="involvement-1">
+                Clemson Pickleball Club
+              </button>
+            </h2>
+            <div id="involvement-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#involvements">
+              <div class="accordion-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-2" aria-expanded="false" aria-controls="involvement-2">
+                Clemson Association for Information Systems
+              </button>
+            </h2>
+            <div id="involvement-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#involvements">
+              <div class="accordion-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-3" aria-expanded="false" aria-controls="involvement-3">
+                German Professional Society
+              </button>
+            </h2>
+            <div id="involvement-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#involvements">
+              <div class="accordion-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-4" aria-expanded="false" aria-controls="involvement-4">
+                Intramural Soccer
+              </button>
+            </h2>
+            <div id="involvement-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#involvements">
+              <div class="accordion-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-5" aria-expanded="false" aria-controls="involvement-5">
+                Stammtisch
+              </button>
+            </h2>
+            <div id="involvement-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#involvements">
+              <div class="accordion-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
 
- <!-- Projects Section -->
-<!--
-- Will include and display all relevant projects that have been completed
-- with quick descriptions and explanations
--->
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="bg-light mt-5">
+  <div class="container-lg">
+    <div class="text-center">
+      <h2>Projects</h2>
+      <p class="lead text-muted">Projects that I have been working on</p>
+    </div>
+  </div>
+
+  <div class="row my-5 g-2 align-items-center justify-content-center">
+    <div class="col-8 col-lg-4 col-xl-3">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <h4 class="card-title">ConnectX</h4>
+          <p class="lead card-subtitle">eBook download only</p>
+          <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+          <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+          <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8 col-lg-4 col-xl-3">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <h4 class="card-title">ConnectX</h4>
+          <p class="lead card-subtitle">eBook download only</p>
+          <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+          <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+          <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8 col-lg-4 col-xl-3">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <h4 class="card-title">ConnectX</h4>
+          <p class="lead card-subtitle">eBook download only</p>
+          <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+          <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+          <a href="#" class="btn btn-outline-primary btn-lg mt-3 disabled">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Contact Section -->
-<!-- Include all socials on how to contact me-->
+<section id="contact">
+  <div class="container-sm">
+    <div class="text-center">
+      <h2>Contact Me</h2>
+      <p class="lead text-muted">Relevant links listed as well</p>
+    </div>
 
-<!--
+    <!-- LinkedIn Github Email -->
+    <div class="row my-5 g-2 align-items-center justify-content-center">
+      <div class="col-sm-4 d-flex">
+        <a href="https://www.linkedin.com/in/michael-steiger-623917252/" class="btn" target="_blank">
+          <img src="in.png" class="img-fluid icon-size" alt="LinkedIn Logo">
+        </a>
+      </div>
+      
+      <div class="col-sm-4 d-flex">
+        <a href="https://www.linkedin.com/in/michael-steiger-623917252/" class="btn" target="_blank">
+          <img src="git.png" class="img-fluid icon-size" alt="LinkedIn Logo">
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
 <footer>Copyright &copy 2023 Michael Steiger</footer>
--->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
