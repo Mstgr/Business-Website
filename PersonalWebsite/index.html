@@ -6,6 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
 </head>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -23,6 +28,23 @@
     // Select and observe all elements with the class 'fade-in-section'
     document.querySelectorAll('.fade-in-section').forEach(function(section) {
       observer.observe(section);
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionButtons = document.querySelectorAll('#involvements .accordion-button');
+    
+    accordionButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var img = document.getElementById('dynamicImage');
+        var imgSrc = button.getAttribute('data-image');
+        var imgSizeClass = button.getAttribute('data-size');
+        
+        img.src = imgSrc;
+        img.className = ''; // Reset classes
+        img.classList.add(imgSizeClass); // Add the new size class
+      });
     });
   });
 </script>
@@ -60,8 +82,8 @@
 <div class="container-fluid p-5 mt-5 bg-primary text-white text-center" id="home" style="height: 100vh;">
   <div class="row h-100 align-items-center">
     <div class="col-12">
-      <h1 class="display-1">Michael Steiger</h1>
-      <p class="lead">Student</p>
+      <p class="lead display-6 text-color">Welcome!</p>
+      <h1 class="display-1">I'm Michael Steiger</h1>
     </div>
   </div>
 </div>
@@ -72,25 +94,27 @@
 
   <!-- Profile Section -->
   <div class="container-lg">
-    <h2 class="container-sm p-3 text-center">About Me</h2>
-
+    <div class="container-sm p-3 text-center fade-in-section">
+      <h2>About Me</h2>
+      <p class="lead text-muted">Aspiring Software Developer</p>
+    </div>
     <!-- Introduction -->
-    <div class="row g-4 justify-content-center align-items-center bg-primary">
+    <div class="row g-4 justify-content-center align-items-center">
       <!-- Image Column -->
       <div class="col-md-5 d-flex justify-content-center" >
         <div class="fade-in-section" style="max-width: 75%;">
-          <img src="IMG_9435.jpg" class="img-fluid" alt="Profile Picture">
+          <img src="IMG_9435.jpg" class="img-fluid shadow-lg" alt="Profile Picture">
         </div>
       </div>
 
       <!-- Text Column -->
-      <div class="col-md-5 text-md-start">
-        <div class="fade-in-section">
-          <h3 class="text-center">Junior at Clemson University</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.
-          </p>
+      <div class="col-md-5 text-md-start fade-in-section">
+        <div class="text-center">
+          <h3>Student at Clemson University</h3>
+          <p class="lead text-muted">Pursuing a Blend of Innovation and Security</p>
         </div>
+          <p class="pt-3">Welcome! I'm currently a Junior at Clemson University, where I am pursuing a Bachelor of Science degree in Computer Science, complemented by a minor in Cybersecurity.</p>
+          <p class="pb-2">I have a deep interest in software development and the ever-evolving realm of technology. My academic journey at Clemson has reinforced and deepened my passion for the field of computer science and Cybersecurity. I look forward to expanding my expertise and further exploring the different areas of my major as I advance in my studies.</p>
       </div>
     </div>
   </div> 
@@ -99,13 +123,14 @@
   <div class="container-lg mt-5">
     <div class="row g-4 justify-content-center align-items-center">
       <!-- Text Column -->
-      <div class="col-md-5 text-md-start">
-        <div class="fade-in-section">
-          <h3 class="text-center">Education and Current Status</h3>
+      <div class="col-md-5 text-md-start fade-in-section">
+        <div class="text-center">
+          <h3>Education and Current Status</h3>
+          <p class="lead text-muted">Relevant Courses that have been completed</p>
+        </div>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.
           </p>
-        </div>
       </div>
 
       <!-- Image Column -->
@@ -124,32 +149,42 @@
       <p class="lead text-muted">Relevant Courses that have been completed</p>
     </div>
     <div class="col-md p-5 fade-in-section">           
-      <table class="table table-light table-bordered table-striped text-bg-color">
+      <table class="table table-light table-bordered table-striped text-bg-color shadow">
         <!-- Table head -->
         <thead>
           <tr>
-            <th>Coursework Completed</th>
-            <th>Time</th>
-            <th>Technical Skill Obtained</th>
+            <th class="col-2">Coursework</th>
+            <th class="col-2">Time</th>
+            <th class="col-8">Content learned</th>
           </tr>
         </thead>
         <!-- Table body -->
         <tbody>
           <tr>
+            <td>Discrete Structures for Computing</td>
+            <td>Fall 2022</td>
+            <td>Covered ideas and techniques from discrete structures that are widely used in the computing sciences. Learned techniques of rigorous argumentation and application to the computing disciplines.</td>
+          </tr>
+          <tr>
             <td>Algorithms and Data Structures</td>
             <td>Spring 2023</td>
-            <td>Fundamental understanding and experience with alrgorithms and data structures</td>
+            <td>Covered data structures and algorithms fundamental to computer science, abstract data-type concepts, measures of program running time and time complexity, and algorithm analysis and design techniques.</td>
           </tr>
           <tr>
             <td>Computer Organization</td>
             <td>Spring 2023</td>
-            <td>Fundamental understanding of computer organization</td>
+            <td>Covered machine architectures on which algorithms are implemented and requirements of architectures that support high-level languages, programming environments, and applications.</td>
           </tr>
           <tr>
             <td>Software Development Foundations</td>
             <td>Fall 2023</td>
-            <td>Emphasis on Software development Foundations</td>
+            <td>Advanced coverage of programming language primitives, function-level design principles, and standard development and debugging tools, and also learned module-level design principles, program specification and reasoning principles, and validation and verification techniques.</td>
           </tr>
+          <tr>
+            <td>Foundations of Computer Science</td>
+            <td>Fall 2023</td>
+            <td>Covered the development of the theoretical foundations of programming, algorithms, languages, automata, computability, complexity, data structures, and operating systems.</td>
+          </tr>           
         </tbody>
       </table>
     </div>
@@ -158,36 +193,41 @@
 
   <!-- Upcoming Coursework -->
   <div class="container-lg mt-5">
-    <div class="text-center">
+    <div class="text-center fade-in-section">
       <h2>Upcoming Coursework</h2> 
-      <p class="lead text-muted">Upcoming Courses to be completed in the Spring</p>
+      <p class="lead text-muted">Relevant upcoming courses to be completed in the Spring</p>
     </div>
-    <div class="col-md p-5">           
-      <table class="table table-light table-bordered table-striped text-bg-color">
+    <div class="col-md p-5 fade-in-section">           
+      <table class="table table-light table-bordered table-striped text-bg-color shadow">
         <!-- Table head -->
         <thead>
           <tr>
-            <th>Coursework</th>
-            <th>Time</th>
-            <th>Technical Skill to be obtained</th>
+            <th class="col-2">Coursework</th>
+            <th class="col-2">Time</th>
+            <th class="col-8">Content to be learned</th>
           </tr>
         </thead>
         <!-- Table body -->
         <tbody>
           <tr>
-            <td>Algorithms and Data Structures</td>
+            <td>Software Engineering</td>
             <td>Spring 2024</td>
-            <td>Fundamental understanding and experience with alrgorithms and data structures</td>
+            <td>Focus on each major phase of the software lifecycle. Coverage of module-level design principles, program specification and reasoning principles, and program validation and verification techniques.</td>
           </tr>
           <tr>
-            <td>Computer Organization</td>
+            <td>Programming Systems</td>
             <td>Spring 2024</td>
-            <td>Fundamental understanding of computer organization</td>
+            <td>Focus in programming languages and systems for computer engineering and computer science majors.</td>
           </tr>
           <tr>
-            <td>Software Development Foundations</td>
-            <td>Fall 2024</td>
-            <td>Emphasis on Software development Foundations</td>
+            <td>Network Programming</td>
+            <td>Spring 2024</td>
+            <td>Concepts of computer network technologies and network programming. Will dive deep into network programming, layered protocol architectures, local and wide area networks, internetwork and intranetwork concepts, and security.</td>
+          </tr>
+          <tr>
+            <td>Intro to Operating Systems</td>
+            <td>Spring 2024</td>
+            <td>Focus on management techniques for the control of computer hardware resources.</td>
           </tr>
         </tbody>
       </table>
@@ -197,41 +237,41 @@
 
   <!-- University Involvement -->
   <div class="container-md">
-    <div class="text-center">
+    <div class="text-center fade-in-section">
       <h2>University Involvement</h2>
-      <p class="lead text-muted">My involvement in extracuriculars at Clemson</p>
+      <p class="lead text-muted">My involvement in extracurriculars at Clemson</p>
     </div>
     <div class="row my-5 g-5 justify-content-around align-items-center">
-      <div class="col-6 col-lg-4">
-        <img src="..." class="img-fluid" alt="Involvement logo">
+      <div class="col-6 col-lg-4 fade-in-section">
+        <img src="pbc.png" class="img-fluid shadow" alt="Involvement Picture" id="dynamicImage">
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 fade-in-section">
         
         <!-- accordion -->
-        <div class="accordion" id="involvements">
+        <div class="accordion shadow" id="involvements">
           <div class="accordion-item">
             <h2 class="accordion-header" id="heading-1">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-1" aria-expanded="true" aria-controls="involvement-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-1" aria-expanded="true" aria-controls="involvement-1" data-image="pbc.png" data-size="img-normal">
                 Clemson Pickleball Club
               </button>
             </h2>
             <div id="involvement-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#involvements">
               <div class="accordion-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>The Clemson Pickleball Club has been a highlight of my time at Clemson, as it offers me a place for the sport as well as a community to be a part of. I really enjoy attending the regular practice sessions that are offered, as well as the exclusive events that I get invited to.</p>
+                <p>Being involved in this club has enabled me to meet many new people and be a part of a new community.</p>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="heading-2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-2" aria-expanded="false" aria-controls="involvement-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#involvement-2" aria-expanded="false" aria-controls="involvement-2" data-image="ais.png" data-size="img-normal">
                 Clemson Association for Information Systems
               </button>
             </h2>
             <div id="involvement-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#involvements">
               <div class="accordion-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>The Clemson Association for Information Systems student chapter has enabled me to enhance my career at Clemson through professional networking and events like tech talks.</p>
+                <p>Being involved in this association has given me access to systems career and technology information, as well as invitations to exclusive events.</p>
               </div>
             </div>
           </div>
@@ -243,8 +283,8 @@
             </h2>
             <div id="involvement-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#involvements">
               <div class="accordion-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>The German Professional Society arrange events with German companies that create job and internship opportunities. Being apart of this Society has allowed me network and get familiar with numerous local and global German companies.</p>
+                <p>I enjoy being apart of GSP as it gives me exlusive invitations to conferences that happen at Clemson.</p>
               </div>
             </div>
           </div>
@@ -256,8 +296,8 @@
             </h2>
             <div id="involvement-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#involvements">
               <div class="accordion-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>Being a part of an Intramural Soccer team over a couple of semesters has been very rewarding, as I played for many years throughout high school. </p>
+                <p>Involving myself in this extracurricular has allowed me to keep the game I love an active part of my life but has also allowed me to engage in healthy competition.</p>
               </div>
             </div>
           </div>
@@ -269,8 +309,8 @@
             </h2>
             <div id="involvement-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#involvements">
               <div class="accordion-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam nulla sunt alias.</p>
+                <p>This extracurricular, called "Stammtisch," is a German word that translates to "regulars' table" and refers to an informal group meeting that is generally held every two weeks at a restaurant. We gather together and enjoy food and drinks while everyone, students and faculty, practice speaking German and discuss various topics.</p>
+                <p>I enjoy attending these events as I speak German fluently and can help beginners with their German. </p>
               </div>
             </div>
           </div>
@@ -285,51 +325,56 @@
 <!-- Projects Section -->
 <section id="projects" class="bg-light mt-5">
   <div class="container-lg">
-    <div class="text-center">
+    <div class="text-center fade-in-section pt-3">
       <h2>Projects</h2>
       <p class="lead text-muted">Projects that I have been working on</p>
     </div>
   </div>
 
-  <div class="row my-5 g-2 align-items-center justify-content-center">
+  <div class="row my-5 g-2 align-items-center justify-content-center fade-in-section">
     <div class="col-8 col-lg-4 col-xl-3">
-      <div class="card border-0">
+      <div class="card custom-card">
         <div class="card-body text-center py-4">
           <h4 class="card-title">ConnectX</h4>
           <p class="lead card-subtitle">eBook download only</p>
           <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
           <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
           <a href="#" class="btn btn-outline-primary btn-lg mt-3">
-            Buy Now
+            Check out
           </a>
         </div>
       </div>
     </div>
 
     <div class="col-8 col-lg-4 col-xl-3">
-      <div class="card border-0">
+      <div class="card custom-card">
         <div class="card-body text-center py-4">
           <h4 class="card-title">ConnectX</h4>
           <p class="lead card-subtitle">eBook download only</p>
           <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
           <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
           <a href="#" class="btn btn-outline-primary btn-lg mt-3">
-            Buy Now
+            Check out
           </a>
         </div>
       </div>
     </div>
 
     <div class="col-8 col-lg-4 col-xl-3">
-      <div class="card border-0">
+      <div class="card custom-card">
         <div class="card-body text-center py-4">
           <h4 class="card-title">ConnectX</h4>
           <p class="lead card-subtitle">eBook download only</p>
-          <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
-          <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
-          <a href="#" class="btn btn-outline-primary btn-lg mt-3 disabled">
-            Buy Now
+          <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sitcorporis saepe dolorum.</p>
+          <a href="#" class="btn btn-outline-primary btn-lg mt-2 disabled">
+            Check out
           </a>
+          <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+            <span class="badge rounded-pill bg-white text-color border">React</span>
+            <span class="badge rounded-pill bg-white text-color border">Plotly</span>
+            <span class="badge rounded-pill bg-white text-color border">Tailwind CSS</span>
+            <span class="badge rounded-pill bg-white text-color border">D3</span>
+          </div>
         </div>
       </div>
     </div>
@@ -339,13 +384,13 @@
 <!-- Contact Section -->
 <section id="contact">
   <div class="container-sm">
-    <div class="text-center">
+    <div class="text-center fade-in-section pt-3">
       <h2>Contact Me</h2>
       <p class="lead text-muted">Relevant links listed as well</p>
     </div>
 
     <!-- LinkedIn Github Email -->
-    <div class="row my-5 g-2 align-items-center justify-content-center">
+    <div class="row my-5 g-2 align-items-center justify-content-center fade-in-section">
       <div class="col-sm-4 d-flex">
         <a href="https://www.linkedin.com/in/michael-steiger-623917252/" class="btn" target="_blank">
           <img src="in.png" class="img-fluid icon-size" alt="LinkedIn Logo">

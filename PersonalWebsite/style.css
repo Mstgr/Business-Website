@@ -25,3 +25,40 @@ body{
   	transform: translateY(0); 
   	transition: opacity 1s ease-out, transform 1s ease-out;
   }
+.custom-card{
+	transition: border-color 0.3s ease;
+	border: 2px solid transparent;
+}
+.custom-card:hover{
+	border-color:blue;
+}
+.custom-image{
+	transition:transform 0.3s ease;
+}
+.custom-card:hover .custom-image{
+	transform:scale(1.05);
+}
+.badge {
+	padding: 0.6em 0.8em;
+	background-color: #f8f9fa; /* A light background color */
+	color: #212529; /* A darker text color for contrast */
+	/*border: 1px solid #dcdcdc; /* A light border color */
+	transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.badge:hover {
+	background-color: #e2e6ea; /* Slightly darker background color on hover */
+}
+.img-normal {
+	width: 100%; /* Normal size */
+	height: auto;
+}
+  
+.img-large {
+	width: 150%; /* Larger size */
+	height: auto;
+}
+  
+.img-extra-large {
+	width: 200%; /* Extra large size */
+	height: auto;
+}
