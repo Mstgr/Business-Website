@@ -52,13 +52,15 @@ body{
 	width: 100%; /* Normal size */
 	height: auto;
 }
-  
 .img-large {
 	width: 150%; /* Larger size */
 	height: auto;
 }
-  
 .img-extra-large {
 	width: 200%; /* Extra large size */
+	height: auto;
+}
+.img-super-large {
+	width: 300%; /* Extra large size */
 	height: auto;
 }
