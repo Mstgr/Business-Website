@@ -48,19 +48,19 @@ body{
 .badge:hover {
 	background-color: #e2e6ea; /* Slightly darker background color on hover */
 }
-.img-normal {
-	width: 100%; /* Normal size */
-	height: auto;
-}
-.img-large {
-	width: 150%; /* Larger size */
-	height: auto;
-}
-.img-extra-large {
-	width: 200%; /* Extra large size */
-	height: auto;
-}
-.img-super-large {
-	width: 300%; /* Extra large size */
-	height: auto;
-}
+.custom-btn {
+	color: white;
+	font-weight: bold;
+	margin-right: 10px; /* Adjust the margin as needed */
+	padding: 20px 40px; /* Adjust padding to your preference */
+	text-transform: uppercase;
+	transition: transform 0.3s ease;
+  }
+  
+  .bg-orange { background-color: #FFA500; } /* Example orange background */
+  .bg-green { background-color: #008000; } /* Example green background */
+  .bg-red { background-color: #FF0000; } /* Example red background */
+  
+  .custom-btn:hover {
+	transform: scale(1.05); /* Scale up the button on hover */
+  }
