@@ -1,66 +1,150 @@
-*
-{
+* {
 	margin: 0;
 	padding: 0;
 }
-body{
+
+body {
 	font-family: sans-serif;
 }
+
 @keyframes fadeIn {
-	from{
+	from {
 		opacity: 0;
 		transform: translateY(20px);
 	}
-	to{
+
+	to {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
-.fade-in-section{
+
+.fade-in-section {
 	opacity: 0;
 	transform: translateY(20px);
 }
+
 .fade-in-section.animate {
-	opacity: 1; 
-  	transform: translateY(0); 
-  	transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-.custom-card{
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.custom-card {
 	transition: border-color 0.3s ease;
 	border: 2px solid transparent;
 }
-.custom-card:hover{
-	border-color:blue;
+
+.custom-card:hover {
+	border-color: blue;
 }
-.custom-image{
-	transition:transform 0.3s ease;
+
+.custom-image {
+	transition: transform 0.3s ease;
 }
-.custom-card:hover .custom-image{
-	transform:scale(1.05);
+
+.custom-card:hover .custom-image {
+	transform: scale(1.05);
 }
+
 .badge {
 	padding: 0.6em 0.8em;
-	background-color: #f8f9fa; /* A light background color */
-	color: #212529; /* A darker text color for contrast */
+	background-color: #f8f9fa;
+	/* A light background color */
+	color: #212529;
+	/* A darker text color for contrast */
 	/*border: 1px solid #dcdcdc; /* A light border color */
-	transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+	transition: background-color 0.3s ease;
+	/* Smooth transition for hover effect */
 }
+
 .badge:hover {
-	background-color: #e2e6ea; /* Slightly darker background color on hover */
+	background-color: #e2e6ea;
+	/* Slightly darker background color on hover */
 }
+
 .custom-btn {
 	color: white;
 	font-weight: bold;
-	margin-right: 10px; /* Adjust the margin as needed */
-	padding: 20px 40px; /* Adjust padding to your preference */
+	margin-right: 10px;
+	/* Adjust the margin as needed */
+	padding: 20px 40px;
+	/* Adjust padding to your preference */
 	text-transform: uppercase;
 	transition: transform 0.3s ease;
-  }
-  
-  .bg-orange { background-color: #FFA500; } /* Example orange background */
-  .bg-green { background-color: #008000; } /* Example green background */
-  .bg-red { background-color: #FF0000; } /* Example red background */
-  
-  .custom-btn:hover {
-	transform: scale(1.05); /* Scale up the button on hover */
-  }
+}
+
+.bg-orange {
+	background-color: #FFA500;
+}
+
+/* Example orange background */
+.bg-green {
+	background-color: #008000;
+}
+
+/* Example green background */
+.bg-red {
+	background-color: #FF0000;
+}
+
+/* Example red background */
+
+.custom-btn:hover {
+	transform: scale(1.05);
+	/* Scale up the button on hover */
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons a {
+	color: #060606;
+	/* White color for icons */
+	font-size: 200px;
+	/* Size of icons */
+	margin: 0 100px;
+	/* Spacing between icons */
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+	color: #1DA1F2;
+	/* Color change for hover */
+	/* Background color change for hover */
+}
+
+/* If you want specific colors for each icon */
+.twitter-icon:hover {
+	color: #1DA1F2;
+}
+
+.facebook-icon:hover {
+	color: #4267B2;
+}
+
+.youtube-icon:hover {
+	color: #FF0000;
+}
+
+.linkedin-icon:hover {
+	color: #2867B2;
+}
+
+
+.welcome-container {
+	background: inherit;
+	/* This will inherit the background of its parent */
+	padding: 10px;
+	/* Adjust padding as needed */
+	border-radius: 10px;
+	/* For rounded corners, optional */
+	width: 50%;
+	/* Adjust the width as needed */
+	margin: 0 auto;
+	/* Center the container */
+}

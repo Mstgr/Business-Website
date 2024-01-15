@@ -33,15 +33,25 @@
   });
 
   function copyToClipboard(textToCopy) {
-  // Copy to clipboard functionality
-  var inputElement = document.createElement('input');
-  inputElement.setAttribute('value', textToCopy);
-  document.body.appendChild(inputElement);
-  inputElement.select();
-  document.execCommand('copy');
-  document.body.removeChild(inputElement);
+    // Copy to clipboard functionality
+    var inputElement = document.createElement('input');
+    inputElement.setAttribute('value', textToCopy);
+    document.body.appendChild(inputElement);
+    inputElement.select();
+    document.execCommand('copy');
+    document.body.removeChild(inputElement);
 
-}
+  }
+  function toggleIcon() {
+    var icon = document.getElementById("emailIcon").querySelector("i");
+    if (icon.classList.contains("fa-envelope")) {
+        icon.classList.remove("fa-envelope");
+        icon.classList.add("fa-check");
+    } else {
+        icon.classList.remove("fa-check");
+        icon.classList.add("fa-envelope");
+    }
+  }
 </script>
 
 <body>
@@ -74,10 +84,15 @@
   </nav>
 
   <!-- Home Section -->
-  <div class="container-fluid p-5 mt-5 bg-primary text-white text-center" id="home" style="height: 100vh;">
+  <div class="container-fluid p-5 mt-5 text-white text-center" id="home" style="height: 100vh;
+  background-image: url('homePage8.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  ">
     <div class="row h-100 align-items-center">
       <div class="col-12">
-        <p class="lead display-6 text-color">Welcome!</p>
+        <p class="lead display-6 pb-5">Welcome!</p>
         <h1 class="display-1">I'm Michael Steiger</h1>
       </div>
     </div>
@@ -128,16 +143,22 @@
             <p class="lead text-muted">Relevant Courses that have been completed</p>
           </div>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda delectus sapiente quidem
-            consequatur odit adipisci necessitatibus nemo aliquid minus modi tempore quibusdam quas vitae, animi ipsam
-            nulla sunt alias.
+            As a dedicated Computer Science major, I am currently engaged in a rigorous academic journey, focusing on
+            critical areas like Software Engineering and Network Programming in my spring courses. These subjects
+            enhance my technical understanding and sharpen my problem-solving skills, essential to the dynamic tech
+            industry.
           </p>
+          <p>Alongside my studies, I am actively seeking an internship opportunity for the upcoming summer. My goal is
+            to advance my knowledge further and gain practical experience in the field. My academic background, coupled
+            with my enthusiasm for technology, makes me a valuable candidate who can contribute significantly to any
+            forward-thinking company. This internship will not only be a step forward in my career but also an
+            opportunity for me to bring fresh perspectives and innovative solutions to the workplace.</p>
         </div>
 
         <!-- Image Column -->
         <div class="col-md-5 d-flex justify-content-center">
           <div class="fade-in-section" style="max-width: 75%;">
-            <img src="test2.png" class="img-fluid shadow-lg" alt="Profile Picture">
+            <img src="IMG_4960.JPG" class="img-fluid shadow-lg" alt="Profile Picture">
           </div>
         </div>
       </div>
@@ -428,19 +449,16 @@
 
       <div class="container my-5">
         <div class="row justify-content-center fade-in-section">
-          <div class="col-md-4 text-center mb-3">
-            <a href="https://www.linkedin.com/in/michael-steiger-623917252/" class="btn btn-outline-primary w-100"
-              target="_blank"><i class="fas fa-link"></i> LinkedIn
+          <div class="social-icons">
+            <a href="https://github.com/mstgr" class="github-icon" target="_blank">
+              <i class="fab fa-github"></i>
             </a>
-          </div>
-          <div class="col-md-4 text-center mb-3">
-            <a href="https://github.com/mstgr" class="btn btn-outline-primary w-100" target="_blank">
-              <i class="fas fa-link"></i> GitHub</a>
-          </div>
-          <div class="col-md-4 text-center mb-3">
-            <button class="btn btn-outline-primary w-100" onclick="copyToClipboard('msteige@clemson.edu')">
-              <i class="fas fa-copy"></i> Copy Email
-            </button>
+            <a onclick="copyToClipboard('msteige@clemson.edu'); toggleIcon();" id="emailIcon" class="email-icon">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/michael-steiger-623917252/" class="linkedin-icon" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>
