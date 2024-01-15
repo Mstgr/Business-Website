@@ -148,3 +148,24 @@ body {
 	margin: 0 auto;
 	/* Center the container */
 }
+.blurry-background {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 25px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 10px; /* Adjust padding here */
+}
+.badge-home {
+	padding: 0.4em 0.6em;
+	background-color: #282a2c61;
+	/* A light background color */
+	color: #212529;
+	/* A darker text color for contrast */
+	/*border: 1px solid #dcdcdc; /* A light border color */
+	transition: background-color 0.3s ease;
+	/* Smooth transition for hover effect */
+}
+.badge-spacing {
+	margin-bottom: 100px; /* Adjust the space as needed */
+  }
