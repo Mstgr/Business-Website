@@ -1,8 +1,6 @@
-* {
-	margin: 0;
-	padding: 0;
+section {
+	padding: 60px 0;
 }
-
 body {
 	font-family: sans-serif;
 }
@@ -36,7 +34,7 @@ body {
 }
 
 .custom-card:hover {
-	border-color: blue;
+	border-color: #57CBAB;
 }
 
 .custom-image {
@@ -113,9 +111,7 @@ body {
 
 /* Hover effect */
 .social-icons a:hover {
-	color: #1DA1F2;
-	/* Color change for hover */
-	/* Background color change for hover */
+	color: #57CBAB;
 }
 
 /* If you want specific colors for each icon */
@@ -158,14 +154,18 @@ body {
 }
 .badge-home {
 	padding: 0.4em 0.6em;
-	background-color: #282a2c61;
+	background-color: #282a2ca1;
 	/* A light background color */
 	color: #212529;
-	/* A darker text color for contrast */
-	/*border: 1px solid #dcdcdc; /* A light border color */
-	transition: background-color 0.3s ease;
-	/* Smooth transition for hover effect */
+	border-color: #57CBAB;
 }
 .badge-spacing {
 	margin-bottom: 100px; /* Adjust the space as needed */
-  }
+}
+.custom-color{
+	background-color:#57CBAB;
+}
+.custom-color:hover{
+	background-color:white;
+	border-color: #57CBAB;
+}
