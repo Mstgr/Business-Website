@@ -3,21 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate');
-        observer.unobserve(entry.target); // Optional: Stop observing after animation has been applied
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.5 // Trigger when half of the image is visible
+    threshold: 0.3
   });
 
-  // Select and observe all elements with the class 'fade-in-section'
   document.querySelectorAll('.fade-in-section').forEach(function (section) {
     observer.observe(section);
   });
 });
 
 function copyToClipboard(textToCopy) {
-  // Copy to clipboard functionality
   var inputElement = document.createElement('input');
   inputElement.setAttribute('value', textToCopy);
   document.body.appendChild(inputElement);

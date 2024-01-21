@@ -157,9 +157,11 @@ body {
 	box-shadow: none;
 }
 /* End custom accordion*/
+
+/* Footer */
 .footer {
-    background-color: #f8f9fa; /* Example background color */
-    color: #212529; /* Example text color */
+    background-color: #f8f9fa;
+    color: #212529; 
     padding: 10px 0;
     font-size: 1rem;
 }
