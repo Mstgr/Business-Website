@@ -469,9 +469,12 @@
             <a href="https://github.com/mstgr" class="github-icon" target="_blank">
               <i class="fab fa-github"></i>
             </a>
-            <a onclick="copyToClipboard('msteige@clemson.edu'); toggleIcon();" id="emailIcon" class="email-icon">
-              <i class="fas fa-envelope"></i>
-            </a>
+            <div class="email-container">
+              <a onclick="copyToClipboard('msteige@clemson.edu'); toggleIcon();" id="emailIcon" class="email-icon">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            <span id="copiedNotification" class="copied-tooltip">Copied!</span>
             <a href="https://www.linkedin.com/in/michael-steiger-623917252/" class="linkedin-icon" target="_blank">
               <i class="fab fa-linkedin-in"></i>
             </a>

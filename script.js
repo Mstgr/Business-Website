@@ -31,3 +31,27 @@ function toggleIcon() {
     icon.classList.add("fa-check");
   }
 }
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    showCopiedNotification();
+  }).catch(err => {
+    console.error("Failed to copy text: ", err);
+  });
+}
+
+function toggleIcon() {
+  const emailIcon = document.getElementById("emailIcon").firstElementChild;
+  emailIcon.classList.toggle("fa-envelope");
+  emailIcon.classList.toggle("fa-check");
+}
+
+function showCopiedNotification() {
+  const tooltip = document.getElementById("copiedNotification");
+  tooltip.classList.add("show");
+
+  // Hide notification after 2 seconds
+  setTimeout(() => {
+    tooltip.classList.remove("show");
+  }, 2000);
+}
